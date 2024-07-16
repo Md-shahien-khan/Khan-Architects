@@ -12,6 +12,11 @@
     font-style: normal;
 }
 /* shared style */
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
 .display-flex{
     display: flex;
 }
@@ -108,11 +113,7 @@ main > section{
     max-width: 530px; 
     /* border: 1px solid black; */
 }
-.feature-title{
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
+
 #quick-list{
     font-weight: 500;
 }
@@ -121,6 +122,54 @@ main > section{
     line-height: 19px;
 }
 /* team and feature related styles */
+
+
+/* facts related style */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size:1.25rem;
+    font-weight: 600;
+}
+.fact-description{
+    max-width: 540px;
+}
+/* facts related style */
+
+
+/* sponsor related styles */
+.sponsor-info{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sponsor-companies{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+/* sponsor related styles */
+
 
 /* Responsive Mobile Query */
 @media screen and (max-width : 576px){
@@ -133,8 +182,16 @@ main > section{
     .banner-title{
         font-size: 3rem;
     }
-    .team-image-container{
-        grid-template-columns: repeat(1, 1fr);
+    .team-image-container, .facts-container, .sponsor-companies{
+        grid-template-columns: 1fr;
+    }
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsor-companies{
+        justify-items:center;
+        gap: 40px;
     }
     .our-features{
         margin-left: 20px;
@@ -148,5 +205,10 @@ main > section{
     }
     .our-features{
         margin: 50px auto;
+    }
+    .sponsor-companies, .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
     }
 }
