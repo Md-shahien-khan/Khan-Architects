@@ -208,9 +208,17 @@ main > section{
 /* sponsor related styles */
 
 
-
-
-
+/* Footer part Style */
+footer{
+    width: 850px;
+    background-color: rgba(255, 244, 231, 1);
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 40px 40px;
+    text-align: center;
+    font-size: 18px;
+}
+/* Footer part Style */
 
 
 
@@ -221,7 +229,7 @@ main > section{
 
 /* Responsive Mobile Query */
 @media screen and (max-width : 576px){
-    .navbar, 
+    .navbar,
     .nav-links, 
     .features,
     .teams{
@@ -251,6 +259,9 @@ main > section{
         margin-top: 50px;
         margin-left: 100px ;
     }
+    footer{
+        width: 100%;
+    }
     
 }
 /* medium device */
@@ -269,5 +280,8 @@ main > section{
     #experience-badge{
         margin-top: 50px;
         margin-left: 250px;
+    }
+    footer{
+        width: 100%;
     }
 }
